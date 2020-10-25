@@ -28,34 +28,42 @@ h1 {
 }
 
 #menuBleu {
+    margin: 0;
     background-color: #2980b9;
 }
 
 #menuJaune {
+    margin: 0;
     background-color: yellow;
 }
 
 #menuVert {
+    margin: 0;
     background-color: #6ab04c;
 }
 
 #menuOrange {
+    margin: 0;
     background-color: orange;
 }
 
 #menuBlanc {
+    margin: 0;
     background-color: white;
 }
 
 #menuViolet {
+    margin: 0;
     background-color:#9400d3;
 }
 
 #menuRose {
+    margin: 0;
     background-color: #fd79a8;
 }
 
 #menuRouge {
+    margin: 0;
     background-color: red;
 }
 
@@ -69,7 +77,7 @@ h1 {
     margin-left: 1vh;
     display: inline-block;
     border-radius: 50px;
-    background-color: white;
+    background-color: #cfcfb8;
 }
 
 .caseSolution {

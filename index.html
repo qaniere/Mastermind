@@ -14,19 +14,35 @@
             pouvant être de 8 couleurs différentes. Faites glisser les jetons de ce menu dans les
             cases du plateau, en partant du bas du plateau. Un jeton noir = un pion placé et de 
             la bonne couleur, un pion blanc = un pion de la bonne couleur.
-            <div class="ligneMenu">
+        </p>
+        <div class="ligneMenu">
+            <div class="caseJeton" ondrop="deposer(event)" ondragover="autoriserDeposer(event)">
                 <div class="caseJeton" id="menuBleu" draggable="true" ondragstart="deplacement(event)"></div>
+            </div>
+            <div class="caseJeton" ondrop="deposer(event)" ondragover="autoriserDeposer(event)">
                 <div class="caseJeton" id="menuJaune" draggable="true" ondragstart="deplacement(event)""></div>
+            </div>
+            <div class="caseJeton" ondrop="deposer(event)" ondragover="autoriserDeposer(event)">
                 <div class="caseJeton" id="menuVert" draggable="true" ondragstart="deplacement(event)""></div>
+            </div>  
+            <div class="caseJeton" ondrop="deposer(event)" ondragover="autoriserDeposer(event)">
                 <div class="caseJeton" id="menuOrange" draggable="true"ondragstart="deplacement(event)"></div>
             </div>
-            <div class="ligneMenu">
+        </div>
+        <div class="ligneMenu">
+            <div class="caseJeton" ondrop="deposer(event)" ondragover="autoriserDeposer(event)">
                 <div class="caseJeton" id="menuBlanc" draggable="true" ondragstart="deplacement(event)"></div>
+            </div>
+            <div class="caseJeton" ondrop="deposer(event)" ondragover="autoriserDeposer(event)">
                 <div class="caseJeton" id="menuViolet" draggable="true" ondragstart="deplacement(event)"></div>
+            </div>
+            <div class="caseJeton" ondrop="deposer(event)" ondragover="autoriserDeposer(event)">
                 <div class="caseJeton" id="menuRose" draggable="true" ondragstart="deplacement(event)"></div>
+            </div>
+            <div class="caseJeton" ondrop="deposer(event)" ondragover="autoriserDeposer(event)">
                 <div class="caseJeton" id="menuRouge" draggable="true" ondragstart="deplacement(event)"></div>
             </div>
-        </p>
+        </div>  
       </div>
     <div id="plateau">
         <div id="premièreLigne">
