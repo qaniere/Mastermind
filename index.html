@@ -15,16 +15,16 @@
             cases du plateau, en partant du bas du plateau. Un jeton noir = un pion placé et de 
             la bonne couleur, un pion blanc = un pion de la bonne couleur.
             <div class="ligneMenu">
-                <div class="caseJeton" id="menuBleu"></div>
-                <div class="caseJeton" id="menuJaune"></div>
-                <div class="caseJeton" id="menuVert"></div>
-                <div class="caseJeton" id="menuOrange"></div>
+                <div class="caseJeton" id="menuBleu" draggable="true" ondragstart="deplacement(event)"></div>
+                <div class="caseJeton" id="menuJaune" draggable="true" ondragstart="deplacement(event)""></div>
+                <div class="caseJeton" id="menuVert" draggable="true" ondragstart="deplacement(event)""></div>
+                <div class="caseJeton" id="menuOrange" draggable="true"ondragstart="deplacement(event)"></div>
             </div>
             <div class="ligneMenu">
-                <div class="caseJeton" id="menuBlanc"></div>
-                <div class="caseJeton" id="menuViolet"></div>
-                <div class="caseJeton" id="menuRose"></div>
-                <div class="caseJeton" id="menuRouge"></div>
+                <div class="caseJeton" id="menuBlanc" draggable="true" ondragstart="deplacement(event)"></div>
+                <div class="caseJeton" id="menuViolet" draggable="true" ondragstart="deplacement(event)"></div>
+                <div class="caseJeton" id="menuRose" draggable="true" ondragstart="deplacement(event)"></div>
+                <div class="caseJeton" id="menuRouge" draggable="true" ondragstart="deplacement(event)"></div>
             </div>
         </p>
       </div>
@@ -33,10 +33,10 @@
             <!-- cj = Case jeton, cs = case solution 
             <Le premier chiffre = le numéro du jeton
             le deuxiéme chiffre le numéro de ligne du jeton -->
-            <div class="caseJeton" id="cj_1_1"></div>
-            <div class="caseJeton" id="cj_2_1"></div>
-            <div class="caseJeton" id="cj_3_1"></div>
-            <div class="caseJeton" id="cj_4_1"></div>
+            <div class="caseJeton" id="cj_1_1" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_2_1" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_3_1" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_4_1" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
             <!-- Début des cases solutions -->
             <div class="caseSolution" id="cs_1_1"></div>
             <div class="caseSolution" id="cs_2_1"></div>
@@ -44,10 +44,10 @@
             <div class="caseSolution" id="cs_4_1"></div>
         </div>
         <div id="DeuxièmeLigne" class="ligne">
-            <div class="caseJeton" id="cj_1_2"></div>
-            <div class="caseJeton" id="cj_2_2"></div>
-            <div class="caseJeton" id="cj_3_2"></div>
-            <div class="caseJeton" id="cj_4_2"></div>
+            <div class="caseJeton" id="cj_1_2" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_2_2" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_3_2" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_4_2" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
             <!-- Début des cases solutions -->
             <div class="caseSolution" id="cs_1_2"></div>
             <div class="caseSolution" id="cs_2_2"></div>
@@ -55,10 +55,10 @@
             <div class="caseSolution" id="cs_4_2"></div>
         </div>
         <div id="TroisiémeLigne" class="ligne">
-            <div class="caseJeton" id="cj_1_3"></div>
-            <div class="caseJeton" id="cj_2_3"></div>
-            <div class="caseJeton" id="cj_3_3"></div>
-            <div class="caseJeton" id="cj_4_3"></div>
+            <div class="caseJeton" id="cj_1_3" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_2_3" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_3_3" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_4_3" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
             <!-- Début des cases solutions -->
             <div class="caseSolution" id="cs_1_3"></div>
             <div class="caseSolution" id="cs_2_3"></div>
@@ -66,10 +66,10 @@
             <div class="caseSolution" id="cs_4_3"></div>
         </div>
         <div id="QuatrièmeLigne" class="ligne">
-            <div class="caseJeton" id="cj_1_4"></div>
-            <div class="caseJeton" id="cj_2_4"></div>
-            <div class="caseJeton" id="cj_3_4"></div>
-            <div class="caseJeton" id="cj_4_4"></div>
+            <div class="caseJeton" id="cj_1_4" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_2_4" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_3_4" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_4_4" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
             <!-- Début des cases solutions -->
             <div class="caseSolution" id="cs_1_4"></div>
             <div class="caseSolution" id="cs_2_4"></div>
@@ -77,10 +77,10 @@
             <div class="caseSolution" id="cs_4_4"></div>
         </div>
         <div id="CinquièmeLigne" class="ligne">
-            <div class="caseJeton" id="cj_1_5"></div>
-            <div class="caseJeton" id="cj_2_5"></div>
-            <div class="caseJeton" id="cj_3_5"></div>
-            <div class="caseJeton" id="cj_4_5"></div>
+            <div class="caseJeton" id="cj_1_5" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_2_5" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_3_5" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_4_5" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
             <!-- Début des cases solutions -->
             <div class="caseSolution" id="cs_1_5"></div>
             <div class="caseSolution" id="cs_2_5"></div>
@@ -88,10 +88,10 @@
             <div class="caseSolution" id="cs_4_5"></div>
         </div>
         <div id="SixièmeLigne" class="ligne">
-            <div class="caseJeton" id="cj_1_6"></div>
-            <div class="caseJeton" id="cj_2_6"></div>
-            <div class="caseJeton" id="cj_3_6"></div>
-            <div class="caseJeton" id="cj_4_6"></div>
+            <div class="caseJeton" id="cj_1_6" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_2_6" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_3_6" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_4_6" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
             <!-- Début des cases solutions -->
             <div class="caseSolution" id="cs_1_6"></div>
             <div class="caseSolution" id="cs_2_6"></div>
@@ -99,10 +99,10 @@
             <div class="caseSolution" id="cs_4_6"></div>
         </div>
         <div id="SeptièmeLigne" class="ligne">
-            <div class="caseJeton" id="cj_1_7"></div>
-            <div class="caseJeton" id="cj_2_7"></div>
-            <div class="caseJeton" id="cj_3_7"></div>
-            <div class="caseJeton" id="cj_4_7"></div>
+            <div class="caseJeton" id="cj_1_7"  ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_2_7"  ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_3_7" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_4_7"  ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
             <!-- Début des cases solutions -->
             <div class="caseSolution" id="cs_1_7"></div>
             <div class="caseSolution" id="cs_2_7"></div>
@@ -110,10 +110,10 @@
             <div class="caseSolution" id="cs_4_7"></div>
         </div>
         <div id="HuitèmeLigne" class="ligne">
-            <div class="caseJeton" id="cj_1_8"></div>
-            <div class="caseJeton" id="cj_2_8"></div>
-            <div class="caseJeton" id="cj_3_8"></div>
-            <div class="caseJeton" id="cj_4_8"></div>
+            <div class="caseJeton" id="cj_1_8" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_2_8" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_3_8" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_4_8" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
             <!-- Début des cases solutions -->
             <div class="caseSolution" id="cs_1_8"></div>
             <div class="caseSolution" id="cs_2_8"></div>
@@ -121,10 +121,10 @@
             <div class="caseSolution" id="cs_4_8"></div>
         </div>
         <div id="NeuvièmeLigne" class="ligne">
-            <div class="caseJeton" id="cj_1_9"></div>
-            <div class="caseJeton" id="cj_2_9"></div>
-            <div class="caseJeton" id="cj_3_9"></div>
-            <div class="caseJeton" id="cj_4_9"></div>
+            <div class="caseJeton" id="cj_1_9" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_2_9" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_3_9" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_4_9" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
             <!-- Début des cases solutions -->
             <div class="caseSolution" id="cs_1_9"></div>
             <div class="caseSolution" id="cs_2_9"></div>
@@ -132,10 +132,10 @@
             <div class="caseSolution" id="cs_4_9"></div>
         </div>
         <div id="DixièmeLigne" class="ligne">
-            <div class="caseJeton" id="cj_1_10"></div>
-            <div class="caseJeton" id="cj_2_10"></div>
-            <div class="caseJeton" id="cj_3_10"></div>
-            <div class="caseJeton" id="cj_4_10"></div>
+            <div class="caseJeton" id="cj_1_10" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_2_10" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_3_10" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
+            <div class="caseJeton" id="cj_4_10" ondrop="deposer(event)" ondragover="autoriserDeposer(event)"></div>
             <!-- Début des cases solutions -->
             <div class="caseSolution" id="cs_1_10"></div>
             <div class="caseSolution" id="cs_2_10"></div>
