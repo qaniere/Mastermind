@@ -3,6 +3,15 @@ body {
     background-color: #ecf0f1;
 }
 
+p {
+    margin: 2vh;
+    text-align: justify;
+}
+
+h1 {
+    margin-top: -0.1vh;
+}
+
 #plateau {
     border-radius: 2%;
     height: 85vh;
@@ -16,6 +25,42 @@ body {
 #cs_1_5, #cs_1_6, #cs_1_7, #cs_1_8,
 #cs_1_9, #cs_1_10 {
     margin-left: 3vw;
+}
+
+#menuBleu {
+    background-color: #2980b9;
+}
+
+#menuJaune {
+    background-color: yellow;
+}
+
+#menuVert {
+    background-color: #6ab04c;
+}
+
+#menuOrange {
+    background-color: orange;
+}
+
+#menuBlanc {
+    background-color: white;
+}
+
+#menuViolet {
+    background-color:#9400d3;
+}
+
+#menuRose {
+    background-color: #fd79a8;
+}
+
+#menuRouge {
+    background-color: red;
+}
+
+.ligneMenu {
+    margin-top: 3vh;
 }
 
 .caseJeton {
@@ -39,4 +84,22 @@ body {
 
 .ligne {
     margin-top: 1vh;
+}
+
+.menuGauche {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-radius: 4%;
+    margin-left: -5vh;
+    margin-top: 3vh;
+    height: 90%;
+    width: 20vw;
+    padding-left: 5vh;
+    position: fixed;
+    z-index: 1;
+    top: 0; 
+    left: 0;
+    background-color:#e74c3c;
+    overflow-x: hidden;
+    padding-top: 20px;
 }

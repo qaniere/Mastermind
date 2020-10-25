@@ -7,6 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <div class="menuGauche">
+        <h1>Mastermind</h1>
+        <p>
+            Vous avez 10 chances de trouver la combinaison. Elle est constituée de 4 jetons 
+            pouvant être de 8 couleurs différentes. Faites glisser les jetons de ce menu dans les
+            cases du plateau, en partant du bas du plateau. Un jeton noir = un pion placé et de 
+            la bonne couleur, un pion blanc = un pion de la bonne couleur.
+            <div class="ligneMenu">
+                <div class="caseJeton" id="menuBleu"></div>
+                <div class="caseJeton" id="menuJaune"></div>
+                <div class="caseJeton" id="menuVert"></div>
+                <div class="caseJeton" id="menuOrange"></div>
+            </div>
+            <div class="ligneMenu">
+                <div class="caseJeton" id="menuBlanc"></div>
+                <div class="caseJeton" id="menuViolet"></div>
+                <div class="caseJeton" id="menuRose"></div>
+                <div class="caseJeton" id="menuRouge"></div>
+            </div>
+        </p>
+      </div>
     <div id="plateau">
         <div id="premièreLigne">
             <!-- cj = Case jeton, cs = case solution 
