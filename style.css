@@ -1,0 +1,42 @@
+body {
+    user-select: none;
+    background-color: #ecf0f1;
+}
+
+#plateau {
+    border-radius: 2%;
+    height: 85vh;
+    width: 30vw;
+    padding: 5vh;
+    margin: 0 auto;
+    background-color: #2980b9;
+}
+
+#cs_1_1, #cs_1_2, #cs_1_3, #cs_1_4, 
+#cs_1_5, #cs_1_6, #cs_1_7, #cs_1_8,
+#cs_1_9, #cs_1_10 {
+    margin-left: 3vw;
+}
+
+.caseJeton {
+    height: 7vh;
+    width: 7vh;
+    margin-left: 1vh;
+    display: inline-block;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.caseSolution {
+    height: 4vh;
+    width: 4vh;
+    margin-bottom: 1vh;
+    margin-left: 1vh;
+    display: inline-block;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.ligne {
+    margin-top: 1vh;
+}

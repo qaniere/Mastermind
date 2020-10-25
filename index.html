@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="plateau">
+        <div id="premièreLigne">
+            <!-- cj = Case jeton, cs = case solution 
+            <Le premier chiffre = le numéro du jeton
+            le deuxiéme chiffre le numéro de ligne du jeton -->
+            <div class="caseJeton" id="cj_1_1"></div>
+            <div class="caseJeton" id="cj_2_1"></div>
+            <div class="caseJeton" id="cj_3_1"></div>
+            <div class="caseJeton" id="cj_4_1"></div>
+            <!-- Début des cases solutions -->
+            <div class="caseSolution" id="cs_1_1"></div>
+            <div class="caseSolution" id="cs_2_1"></div>
+            <div class="caseSolution" id="cs_3_1"></div>
+            <div class="caseSolution" id="cs_4_1"></div>
+        </div>
+        <div id="DeuxièmeLigne" class="ligne">
+            <div class="caseJeton" id="cj_1_2"></div>
+            <div class="caseJeton" id="cj_2_2"></div>
+            <div class="caseJeton" id="cj_3_2"></div>
+            <div class="caseJeton" id="cj_4_2"></div>
+            <!-- Début des cases solutions -->
+            <div class="caseSolution" id="cs_1_2"></div>
+            <div class="caseSolution" id="cs_2_2"></div>
+            <div class="caseSolution" id="cs_3_2"></div>
+            <div class="caseSolution" id="cs_4_2"></div>
+        </div>
+        <div id="TroisiémeLigne" class="ligne">
+            <div class="caseJeton" id="cj_1_3"></div>
+            <div class="caseJeton" id="cj_2_3"></div>
+            <div class="caseJeton" id="cj_3_3"></div>
+            <div class="caseJeton" id="cj_4_3"></div>
+            <!-- Début des cases solutions -->
+            <div class="caseSolution" id="cs_1_3"></div>
+            <div class="caseSolution" id="cs_2_3"></div>
+            <div class="caseSolution" id="cs_3_3"></div>
+            <div class="caseSolution" id="cs_4_3"></div>
+        </div>
+        <div id="QuatrièmeLigne" class="ligne">
+            <div class="caseJeton" id="cj_1_4"></div>
+            <div class="caseJeton" id="cj_2_4"></div>
+            <div class="caseJeton" id="cj_3_4"></div>
+            <div class="caseJeton" id="cj_4_4"></div>
+            <!-- Début des cases solutions -->
+            <div class="caseSolution" id="cs_1_4"></div>
+            <div class="caseSolution" id="cs_2_4"></div>
+            <div class="caseSolution" id="cs_3_4"></div>
+            <div class="caseSolution" id="cs_4_4"></div>
+        </div>
+        <div id="CinquièmeLigne" class="ligne">
+            <div class="caseJeton" id="cj_1_5"></div>
+            <div class="caseJeton" id="cj_2_5"></div>
+            <div class="caseJeton" id="cj_3_5"></div>
+            <div class="caseJeton" id="cj_4_5"></div>
+            <!-- Début des cases solutions -->
+            <div class="caseSolution" id="cs_1_5"></div>
+            <div class="caseSolution" id="cs_2_5"></div>
+            <div class="caseSolution" id="cs_3_5"></div>
+            <div class="caseSolution" id="cs_4_5"></div>
+        </div>
+        <div id="SixièmeLigne" class="ligne">
+            <div class="caseJeton" id="cj_1_6"></div>
+            <div class="caseJeton" id="cj_2_6"></div>
+            <div class="caseJeton" id="cj_3_6"></div>
+            <div class="caseJeton" id="cj_4_6"></div>
+            <!-- Début des cases solutions -->
+            <div class="caseSolution" id="cs_1_6"></div>
+            <div class="caseSolution" id="cs_2_6"></div>
+            <div class="caseSolution" id="cs_3_6"></div>
+            <div class="caseSolution" id="cs_4_6"></div>
+        </div>
+        <div id="SeptièmeLigne" class="ligne">
+            <div class="caseJeton" id="cj_1_7"></div>
+            <div class="caseJeton" id="cj_2_7"></div>
+            <div class="caseJeton" id="cj_3_7"></div>
+            <div class="caseJeton" id="cj_4_7"></div>
+            <!-- Début des cases solutions -->
+            <div class="caseSolution" id="cs_1_7"></div>
+            <div class="caseSolution" id="cs_2_7"></div>
+            <div class="caseSolution" id="cs_3_7"></div>
+            <div class="caseSolution" id="cs_4_7"></div>
+        </div>
+        <div id="HuitèmeLigne" class="ligne">
+            <div class="caseJeton" id="cj_1_8"></div>
+            <div class="caseJeton" id="cj_2_8"></div>
+            <div class="caseJeton" id="cj_3_8"></div>
+            <div class="caseJeton" id="cj_4_8"></div>
+            <!-- Début des cases solutions -->
+            <div class="caseSolution" id="cs_1_8"></div>
+            <div class="caseSolution" id="cs_2_8"></div>
+            <div class="caseSolution" id="cs_3_8"></div>
+            <div class="caseSolution" id="cs_4_8"></div>
+        </div>
+        <div id="NeuvièmeLigne" class="ligne">
+            <div class="caseJeton" id="cj_1_9"></div>
+            <div class="caseJeton" id="cj_2_9"></div>
+            <div class="caseJeton" id="cj_3_9"></div>
+            <div class="caseJeton" id="cj_4_9"></div>
+            <!-- Début des cases solutions -->
+            <div class="caseSolution" id="cs_1_9"></div>
+            <div class="caseSolution" id="cs_2_9"></div>
+            <div class="caseSolution" id="cs_3_9"></div>
+            <div class="caseSolution" id="cs_4_9"></div>
+        </div>
+        <div id="DixièmeLigne" class="ligne">
+            <div class="caseJeton" id="cj_1_10"></div>
+            <div class="caseJeton" id="cj_2_10"></div>
+            <div class="caseJeton" id="cj_3_10"></div>
+            <div class="caseJeton" id="cj_4_10"></div>
+            <!-- Début des cases solutions -->
+            <div class="caseSolution" id="cs_1_10"></div>
+            <div class="caseSolution" id="cs_2_10"></div>
+            <div class="caseSolution" id="cs_3_10"></div>
+            <div class="caseSolution" id="cs_4_10"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
