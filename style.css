@@ -15,7 +15,7 @@ h1 {
 #plateau {
     border-radius: 2%;
     height: 85vh;
-    width: 30vw;
+    width: 35vw;
     padding: 5vh;
     margin: 0 auto;
     background-color: #2980b9;
@@ -87,7 +87,7 @@ h1 {
     margin-left: 1vh;
     display: inline-block;
     border-radius: 50px;
-    background-color: white;
+    background-color: #cfcfb8;
 }
 
 .ligne {

@@ -1,6 +1,9 @@
 var ligneActuelle = 10;
 //On commence à remplir la dixième puis on descend
 
+code = ["Bleu", "Blanc", "Rouge", "Vert"]
+lignes = []
+
 function deplacement(element) {
     // Fonction qui est appellée quand on fait bouger un jeton du menu
     // element contient des informations comme les attributs html du jeton, ses coordonnées x et y
@@ -24,6 +27,14 @@ function deposer(element) {
         var jeton = element.dataTransfer.getData("text"); //On récuperer l'élement à ajouter
         element.target.appendChild(document.getElementById(jeton)); // On l'ajoute au bon endroit
         var destination = document.getElementById(jeton.replace("menu", ""));
+
+        var nouveauJeton = document.createElement("div")
+        nouveauJeton.setAttribute("id", jeton)
+        nouveauJeton.setAttribute("class", "caseJeton")
+        destination.appendChild(nouveauJeton)
+        //Création d'un nouveau jeton identique à celui déplacé, puis déplacement dans le mneu
+
+
     }
 
 }
