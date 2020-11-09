@@ -111,3 +111,11 @@ h1 {
     overflow-x: hidden;
     padding-top: 20px;
 }
+
+.caseSolutionBienPlace {
+    background-color: black;
+}
+
+.caseSolutionBonneCouleur {
+    background-color: white;
+}

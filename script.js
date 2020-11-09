@@ -1,5 +1,6 @@
 var ligneActuelle = 10; //On commence à remplir la dixième puis on descend
 var derniereCase = null //La dernière case dont un jeton a été deplacée
+var contenuLigne = [null, null, null, null];
 var code = ["Bleu", "Blanc", "Rouge", "Vert"]
 var couleurs = ["Bleu", "Blanc", "Rouge", "Vert", "Jaune", "Orange", "Blanc", "Rose", "Violet"]
 
@@ -43,11 +44,7 @@ function deposer(element) {
             document.getElementById("poubelle").innerHTML = "";
         }
 
-        //PROCESS A APPLIQUER :
-        // 1 - Récupération du numéro de case (1 à 4) 
-        // 2 - moins 1 pour correspondre à la liste
-        // 3 - Si les 4 jetons sont entrés, vérification d'égalité avec le code
-        // 4 - Sinon, comparaison case par case et incrémantation compteur si égalité, si bonne couleur
+        verification()
     }
 }
 
@@ -55,4 +52,62 @@ function seSouvenir(caseJeton) {
     //Fonction appellée quand on retire un jeton d'une case
     //Si la case fait partie du plateau, on note son id pour pouvoir la retrouver plus tard
     origineJeton = !couleurs.includes(caseJeton.id) ? caseJeton : null;
+}
+
+function verification() {
+    //Fonction qui vérifie le contenu de la ligne actuelle
+
+    var ligne = document.getElementById(ligneActuelle); 
+    var casesLigne = ligne.children;
+    //Récupération des 4 cases jetons sous forme de liste 
+
+    for(i = 0; i < 4; i++) {
+
+        if (casesLigne[i].children.length != 0) {
+        //Si la case est remplie
+            var jeton = casesLigne[i].children[0].id.replace("menu", "");
+            contenuLigne[i] = jeton;
+            //On récupere la couleur du jeton présent grâce à son ID
+        } else {
+            contenuLigne[i] = null;
+        }
+    }
+
+    if(!contenuLigne.includes(null)) {
+    //Si la ligne est totalement remplie
+
+        var bienPlace = 0;
+        var bonneCouleur = 0;
+        for(i = 0; i < 4; i++) {
+            if (contenuLigne[i] == code[i]) {
+                bienPlace++;
+            } else if(code.includes(contenuLigne[i])){
+                bonneCouleur++;
+            }
+        }
+ 
+        if(bienPlace == 4) {
+            alert("Bravo, c'est gagné !");
+        } else {
+            
+            for(i = 1; i <= 4; i++) {
+
+                var idCaseSolution = "cs_" + i + "_" + ligneActuelle;
+                var caseSolution = document.getElementById(idCaseSolution);
+                //On récupere chaque case solution
+
+                if(bienPlace != 0) {
+                    caseSolution.classList.add("caseSolutionBienPlace");
+                    bienPlace -= 1;
+                } else if (bonneCouleur != 0) {
+                    caseSolution.classList.add("caseSolutionBonneCouleur");
+                    bonneCouleur -= 1;
+                }
+                //On ajoute les indices au fur et à mesure                 
+            }
+
+            ligneActuelle -=1;
+            //On remonte d'une ligne
+        }
+    }
 }
