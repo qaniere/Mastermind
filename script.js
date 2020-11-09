@@ -9,6 +9,9 @@ var code = listeTriee.slice(0, 4);
 var audioJeton = document.getElementById("bruitJeton");
 var audioSolution = document.getElementById("bruitSolution");
 var audioVictoire = document.getElementById("bruitVictoire");
+var audioDefaite = document.getElementById("bruitDéfaite");
+
+MicroModal.init(); //Initilisation des fenêtres modales
 
 function deplacement(element) {
     // Fonction qui est appellée quand on fait bouger un jeton du menu
@@ -121,9 +124,20 @@ function verification() {
                 }
                 //On ajoute les indices au fur et à mesure                 
             }
-            audioSolution.play();
+        
             ligneActuelle -=1;
             //On remonte d'une ligne
+        
+            if(ligneActuelle == 0) {
+                audioDefaite.play();
+                MicroModal.show("modal-defaite");
+            } else {
+                audioSolution.play();
+            }
         }
     }
 }
+
+document.getElementById("rejouer").addEventListener("click", function() {
+    document.location.reload()
+});

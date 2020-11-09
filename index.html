@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Mastermind</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lib/micromodal.css">
     <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -164,9 +165,45 @@
             <div class="caseSolution" id="cs_4_10"></div>
         </div>
     </div>
+    <div class="modal micromodal-slide" id="modal-defaite" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header class="modal__header">
+              <h2 class="modal__title" id="modal-1-title"> Défaite ! </h2>
+            </header>
+            <main class="modal__content" id="modal-1-content">
+              <p>
+                Vous n'avez pas trouvé le code dans les 10 essais impartis. Dommage.
+              </p>
+            </main>
+            <footer class="modal__footer">
+              <button id="rejouer" class="modal__btn modal__btn-primary">Rejouer</button>
+            </footer>
+          </div>
+        </div>
+    </div>
+    <div class="modal micromodal-slide" id="modal-victoire" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header class="modal__header">
+              <h2 class="modal__title" id="modal-1-title"> Bravo ! </h2>
+            </header>
+            <main class="modal__content" id="modal-1-content">
+              <p>
+               Il faut aura seulement fallu (x) essais afin de trouver le code !
+              </p>
+            </main>
+            <footer class="modal__footer">
+              <button id="rejouer" class="modal__btn modal__btn-primary">Rejouer</button>
+            </footer>
+          </div>
+        </div>
+    </div>
     <audio id="bruitVictoire" src="sons/victoire.mp3"></audio>
+    <audio id="bruitDéfaite" src="sons/défaite.mp3"></audio>
     <audio id="bruitJeton" src="sons/jeton.mp3"></audio>
     <audio id="bruitSolution" src="sons/solution.mp3"></audio>
+    <script src="lib/micromodal.js"></script>
     <script src="lib/jquery.js"></script>
     <script src="lib/confetti.js"></script>
     <script src="script.js"></script>
