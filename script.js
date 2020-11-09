@@ -1,8 +1,10 @@
 var ligneActuelle = 10; //On commence à remplir la dixième puis on descend
 var derniereCase = null //La dernière case dont un jeton a été deplacée
 var contenuLigne = [null, null, null, null];
-var code = ["Bleu", "Blanc", "Rouge", "Vert"]
-var couleurs = ["Bleu", "Blanc", "Rouge", "Vert", "Jaune", "Orange", "Blanc", "Rose", "Violet"]
+var couleurs = ["Bleu", "Blanc", "Rouge", "Vert", "Jaune", "Orange", "Rose", "Violet"]
+
+var listeTriee = couleurs.sort(() => Math.random() - 0.5)
+var code = listeTriee.slice(0, 4);
 
 function deplacement(element) {
     // Fonction qui est appellée quand on fait bouger un jeton du menu
