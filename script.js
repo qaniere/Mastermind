@@ -6,6 +6,10 @@ var couleurs = ["Bleu", "Blanc", "Rouge", "Vert", "Jaune", "Orange", "Rose", "Vi
 var listeTriee = couleurs.sort(() => Math.random() - 0.5)
 var code = listeTriee.slice(0, 4);
 
+var audioJeton = document.getElementById("bruitJeton");
+var audioSolution = document.getElementById("bruitSolution");
+var audioVictoire = document.getElementById("bruitVictoire");
+
 function deplacement(element) {
     // Fonction qui est appellée quand on fait bouger un jeton du menu
     // element contient des informations comme les attributs html du jeton, ses coordonnées x et y
@@ -37,6 +41,8 @@ function deposer(element) {
         nouveauJeton.setAttribute("ondragstart", "deplacement(event)");
         destination.appendChild(nouveauJeton);
         //Création d'un nouveau jeton identique à celui déplacé, puis déplacement dans le menu
+
+        audioJeton.play();
 
         if (origineJeton != null) {
             origineJeton.innerHTML = "";
@@ -89,7 +95,15 @@ function verification() {
         }
  
         if(bienPlace == 4) {
-            alert("Bravo, c'est gagné !");
+            $.confetti.start();
+            bruitVictoire.play();
+            for(i = 1; i <= 4; i++) {
+
+                var idCaseSolution = "cs_" + i + "_" + ligneActuelle;
+                var caseSolution = document.getElementById(idCaseSolution);
+                //On récupere chaque case solution
+                caseSolution.classList.add("caseSolutionBienPlace");
+            }
         } else {
             
             for(i = 1; i <= 4; i++) {
@@ -107,7 +121,7 @@ function verification() {
                 }
                 //On ajoute les indices au fur et à mesure                 
             }
-
+            audioSolution.play();
             ligneActuelle -=1;
             //On remonte d'une ligne
         }
