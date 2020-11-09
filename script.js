@@ -11,6 +11,11 @@ var audioSolution = document.getElementById("bruitSolution");
 var audioVictoire = document.getElementById("bruitVictoire");
 var audioDefaite = document.getElementById("bruitDéfaite");
 
+var utiliseFirefox = typeof InstallTrigger !== "undefined";
+if(utiliseFirefox) {
+    alert("ATTENTION : Le drag and drop ne fonctionne pas encore sur Firefox en raison d'une API différente.")
+} 
+
 MicroModal.init(); //Initilisation des fenêtres modales
 
 function deplacement(element) {
